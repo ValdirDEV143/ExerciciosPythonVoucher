@@ -1,0 +1,58 @@
+# Define as opções da calculadora
+calculator_options = {
+    1: "Adição",
+    2: "Subtração",
+    3: "Multiplicação",
+    4: "Divisão"
+}
+
+while True:
+    # Exibe as opções disponíveis
+    print("Escolha uma operação:")
+    for key, value in calculator_options.items():
+        print(f"{key} == {value}")
+
+    # Obtém a entrada do usuário para a operação
+    operation = int(input("Digite o número da operação desejada (ou 0 para sair): "))
+
+    if operation == 0:
+        print("Interromper cálculo")
+        break
+
+    # Verifica se a operação é válida
+    if operation in calculator_options:
+        # Obtém a entrada do usuário para dois números
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+
+        # Realiza a operação selecionada
+        if operation == 1:
+            result = num1 + num2
+        elif operation == 2:
+            result = num1 - num2
+        elif operation == 3:
+            result = num1 * num2
+        elif operation == 4:
+            if num2 != 0:
+                result = num1 / num2
+            else:
+                print("Erro: Divisão por zero não é permitida.")
+                result = None
+        else:
+            print("Operação inválida.")
+            result = None
+
+        # Exibe o resultado
+        if result is not None:
+            print(f"Resultado da operação: {result}")
+    else:
+        print("Opção inválida. Escolha um número de 1 a 4 para a operação.")
+
+
+
+
+
+
+
+
+

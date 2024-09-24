@@ -1,0 +1,5 @@
+nome = input("Qual é seu nome? ")
+idade = int(input("Quantos anos você tem? "))
+ano_atual = 2024
+ano_100_anos = ano_atual + (100 - idade)
+print(f"Olá, {nome}!Você terá 100 anos em {ano_100_anos}.")
